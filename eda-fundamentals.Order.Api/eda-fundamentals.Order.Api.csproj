@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <RootNamespace>eda_fundamentals.Order.Api</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\eda-fundamentals.Order.Domain\eda-fundamentals.Order.Domain.csproj" />
+    <ProjectReference Include="..\eda-fundamentals.Order.Infra\eda-fundamentals.Order.Infra.csproj" />
+    <ProjectReference Include="..\eda-fundamentals.Shared\eda-fundamentals.Shared.csproj" />
+  </ItemGroup>
+
+</Project>

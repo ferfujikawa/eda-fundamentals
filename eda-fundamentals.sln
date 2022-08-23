@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "eda-fundamentals.Receipt.Do
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "eda-fundamentals.Order.Infra", "eda-fundamentals.Order.Infra\eda-fundamentals.Order.Infra.csproj", "{E7362EF2-22A3-4F17-9069-4AD6BBFF8F8D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "eda-fundamentals.Order.Api", "eda-fundamentals.Order.Api\eda-fundamentals.Order.Api.csproj", "{CEF6DFF9-34A6-4A6B-AD94-D6ADA1CF4C32}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -42,5 +44,9 @@ Global
 		{E7362EF2-22A3-4F17-9069-4AD6BBFF8F8D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E7362EF2-22A3-4F17-9069-4AD6BBFF8F8D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E7362EF2-22A3-4F17-9069-4AD6BBFF8F8D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CEF6DFF9-34A6-4A6B-AD94-D6ADA1CF4C32}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CEF6DFF9-34A6-4A6B-AD94-D6ADA1CF4C32}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CEF6DFF9-34A6-4A6B-AD94-D6ADA1CF4C32}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CEF6DFF9-34A6-4A6B-AD94-D6ADA1CF4C32}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
