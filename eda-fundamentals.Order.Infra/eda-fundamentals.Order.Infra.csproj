@@ -5,6 +5,10 @@
     <ProjectReference Include="..\eda-fundamentals.Order.Domain\eda-fundamentals.Order.Domain.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Confluent.Kafka" Version="1.9.2" />
+  </ItemGroup>
+
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
     <RootNamespace>eda_fundamentals.Order.Infra</RootNamespace>
