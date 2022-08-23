@@ -8,25 +8,25 @@ namespace eda_fundamentals.Order.Infra.Repositories
         private List<Product> _products = Enumerable.Range(1, 10).Select(x => new Product($"Produto {x}", x * 50.10M)).ToList();
 
         public async Task CreateAsync(Product entity)
-        {   
-            _products.Add(entity);
+        {
+            await Task.FromResult(true);
         }
 
         public async Task DeleteAsync(Product entity)
         {
-            _products.Remove(entity);
+            await Task.FromResult(true);
         }
 
         public async Task DeleteAsync(Guid id)
         {
-            var user = _products.FirstOrDefault(x => x.Id == id);
-            if (user != null)
-                await DeleteAsync(user);
+            await Task.FromResult(true);
         }
 
         public async Task<Product?> GetByIdAsync(Guid id)
         {
-            return _products.FirstOrDefault(x => x.Id == id);
+            var product = new Product("Produto fake", 10);
+            await Task.Run(() => _products.Add(product));
+            return product;
         }
     }
 }

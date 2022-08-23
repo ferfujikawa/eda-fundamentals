@@ -8,25 +8,26 @@ namespace eda_fundamentals.Order.Infra.Repositories
         private List<User> _users = Enumerable.Range(1, 10).Select(x => new User($"user{x}@edafundamentals.com")).ToList();
 
         public async Task CreateAsync(User entity)
-        {   
-            _users.Add(entity);
+        {
+            await Task.FromResult(true);
         }
 
         public async Task DeleteAsync(User entity)
         {
-            _users.Remove(entity);
+            await Task.FromResult(true);
         }
 
         public async Task DeleteAsync(Guid id)
         {
-            var user = _users.FirstOrDefault(x => x.Id == id);
-            if (user != null)
-                await DeleteAsync(user);
+            await Task.FromResult(true);
         }
 
         public async Task<User?> GetByIdAsync(Guid id)
         {
-            return _users.FirstOrDefault(x => x.Id == id);
+            var user = new User("Usuário fake");
+            await Task.Run(() => _users.Add(user));
+            
+            return user;
         }
     }
 }
