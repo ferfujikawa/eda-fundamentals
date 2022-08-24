@@ -1,6 +1,8 @@
 ﻿using eda_fundamentals.Order.Domain.Commands;
+using eda_fundamentals.Order.Domain.Event;
 using eda_fundamentals.Order.Domain.Repositories;
 using eda_fundamentals.Shared.Commands.Handlers;
+using eda_fundamentals.Shared.EventServices;
 
 namespace eda_fundamentals.Order.Domain.Handler
 {
@@ -9,14 +11,17 @@ namespace eda_fundamentals.Order.Domain.Handler
         private readonly IOrderRepository _orderRepository;
         private readonly IUserRepository _userRepository;
         private readonly IProductRepository _productRepository;
+        private readonly IEventService _eventService;
         public PlaceOrderHandler(
             IOrderRepository orderRepository,
             IUserRepository userRepository,
-            IProductRepository productRepository)
+            IProductRepository productRepository,
+            IEventService eventService)
         {
             _orderRepository = orderRepository;
             _userRepository = userRepository;
             _productRepository = productRepository;
+            _eventService = eventService;
         }
 
         public async Task HandleAsync(PlaceOrderCommand command)
@@ -39,6 +44,12 @@ namespace eda_fundamentals.Order.Domain.Handler
             #endregion
 
             await _orderRepository.CreateAsync(order);
+
+            order.OnOrderPlaced += OnOrderPlaced;
+
+            order.Place();
         }
+
+        private void OnOrderPlaced(object sender, EventArgs e) => _eventService.QueueAsync(new OrderPlacedEvent((Entities.Order)sender));
     }
 }
