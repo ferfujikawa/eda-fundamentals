@@ -10,6 +10,8 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 builder.Services.AddServices();
+builder.Services.AddProducerConfig("localhost:29092");
+builder.Services.AddPublishers();
 
 var app = builder.Build();
 

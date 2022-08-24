@@ -2,8 +2,8 @@
 
 namespace eda_fundamentals.Shared.EventServices
 {
-    public interface IEventService
+    public interface IEventService<T> where T : IDomainEvent
     {
-        public Task QueueAsync(IDomainEvent evt);
+        Task QueueAsync(T domainEvent);
     }
 }

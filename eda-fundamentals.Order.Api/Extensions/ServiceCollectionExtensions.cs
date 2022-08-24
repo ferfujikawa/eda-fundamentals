@@ -1,14 +1,19 @@
 ﻿using eda_fundamentals.Order.Domain.Commands;
+using eda_fundamentals.Order.Domain.EventServices;
 using eda_fundamentals.Order.Domain.Handlers;
 using eda_fundamentals.Order.Domain.Repositories;
+using eda_fundamentals.Order.Infra.EventServices;
 using eda_fundamentals.Order.Infra.ExternalServices;
 using eda_fundamentals.Order.Infra.Repositories;
-using eda_fundamentals.Shared.EventServices;
 
 namespace eda_fundamentals.Order.Api.Extensions
 {
     public static class ServiceCollectionExtensions
     {
+        public static void AddProducerConfig(this IServiceCollection services, string bootStrapServers)
+        {
+            services.AddTransient(x => new KafkaProducerConfig(bootStrapServers));
+        }
         public static void AddServices(this IServiceCollection services)
         {
             services.AddTransient<PlaceOrderHandler>();
@@ -16,8 +21,11 @@ namespace eda_fundamentals.Order.Api.Extensions
             services.AddTransient<IUserRepository, FakeUserRepository>();
             services.AddTransient<IProductRepository, FakeProductRepository>();
             services.AddTransient<IOrderRepository, FakeOrderRepository>();
+        }
 
-            services.AddScoped<IEventService, KafkaEventService>();
+        public static void AddPublishers(this IServiceCollection services)
+        {
+            services.AddTransient<IOrderEventService, KafkaOrderEventService>();
         }
     }
 }
