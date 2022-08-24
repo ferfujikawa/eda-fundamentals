@@ -1,31 +1,26 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.30114.105
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32819.101
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "eda-fundamentals.Order.Domain", "eda-fundamentals.Order.Domain\eda-fundamentals.Order.Domain.csproj", "{60B0752E-EC22-4DFC-983C-0CFD4685585F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "eda-fundamentals.Order.Domain", "eda-fundamentals.Order.Domain\eda-fundamentals.Order.Domain.csproj", "{60B0752E-EC22-4DFC-983C-0CFD4685585F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "eda-fundamentals.Clearance.Domain", "eda-fundamentals.Clearance.Domain\eda-fundamentals.Clearance.Domain.csproj", "{00A325F7-C767-4D17-87DF-659F113A2DB2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "eda-fundamentals.Clearance.Domain", "eda-fundamentals.Clearance.Domain\eda-fundamentals.Clearance.Domain.csproj", "{00A325F7-C767-4D17-87DF-659F113A2DB2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "eda-fundamentals.Shared", "eda-fundamentals.Shared\eda-fundamentals.Shared.csproj", "{5B6FF7FA-DED1-4497-B830-592183513A87}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "eda-fundamentals.Shared", "eda-fundamentals.Shared\eda-fundamentals.Shared.csproj", "{5B6FF7FA-DED1-4497-B830-592183513A87}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "eda-fundamentals.Receipt.Domain", "eda-fundamentals.Receipt.Domain\eda-fundamentals.Receipt.Domain.csproj", "{4EBC46C7-BC00-46EB-8F02-0C53E8C3B0F9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "eda-fundamentals.Receipt.Domain", "eda-fundamentals.Receipt.Domain\eda-fundamentals.Receipt.Domain.csproj", "{4EBC46C7-BC00-46EB-8F02-0C53E8C3B0F9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "eda-fundamentals.Order.Infra", "eda-fundamentals.Order.Infra\eda-fundamentals.Order.Infra.csproj", "{E7362EF2-22A3-4F17-9069-4AD6BBFF8F8D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "eda-fundamentals.Order.Infra", "eda-fundamentals.Order.Infra\eda-fundamentals.Order.Infra.csproj", "{E7362EF2-22A3-4F17-9069-4AD6BBFF8F8D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "eda-fundamentals.Order.Api", "eda-fundamentals.Order.Api\eda-fundamentals.Order.Api.csproj", "{CEF6DFF9-34A6-4A6B-AD94-D6ADA1CF4C32}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "eda-fundamentals.Order.Api", "eda-fundamentals.Order.Api\eda-fundamentals.Order.Api.csproj", "{CEF6DFF9-34A6-4A6B-AD94-D6ADA1CF4C32}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "eda-fundamentals.Receipt.Api", "eda-fundamentals.Receipt.Api\eda-fundamentals.Receipt.Api.csproj", "{5314FBE0-1B5A-4D70-BB20-EE623C47DBA6}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "eda-fundamentals.Receipt.Infra", "eda-fundamentals.Receipt.Infra\eda-fundamentals.Receipt.Infra.csproj", "{628CCEB1-BA15-4C29-B005-420E5FC4B08B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "eda-fundamentals.Receipt.Infra", "eda-fundamentals.Receipt.Infra\eda-fundamentals.Receipt.Infra.csproj", "{628CCEB1-BA15-4C29-B005-420E5FC4B08B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{60B0752E-EC22-4DFC-983C-0CFD4685585F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -52,13 +47,15 @@ Global
 		{CEF6DFF9-34A6-4A6B-AD94-D6ADA1CF4C32}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CEF6DFF9-34A6-4A6B-AD94-D6ADA1CF4C32}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CEF6DFF9-34A6-4A6B-AD94-D6ADA1CF4C32}.Release|Any CPU.Build.0 = Release|Any CPU
-		{5314FBE0-1B5A-4D70-BB20-EE623C47DBA6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{5314FBE0-1B5A-4D70-BB20-EE623C47DBA6}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{5314FBE0-1B5A-4D70-BB20-EE623C47DBA6}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{5314FBE0-1B5A-4D70-BB20-EE623C47DBA6}.Release|Any CPU.Build.0 = Release|Any CPU
 		{628CCEB1-BA15-4C29-B005-420E5FC4B08B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{628CCEB1-BA15-4C29-B005-420E5FC4B08B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{628CCEB1-BA15-4C29-B005-420E5FC4B08B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{628CCEB1-BA15-4C29-B005-420E5FC4B08B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A99AD192-DB9C-451D-AFC8-7CCA18CF51DB}
 	EndGlobalSection
 EndGlobal
