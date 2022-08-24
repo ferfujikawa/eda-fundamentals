@@ -1,6 +1,6 @@
 ﻿using eda_fundamentals.Shared.Events;
 
-namespace eda_fundamentals.Order.Domain.Event
+namespace eda_fundamentals.Order.Domain.Events
 {
     public class OrderPlacedEvent : IDomainEvent
     {

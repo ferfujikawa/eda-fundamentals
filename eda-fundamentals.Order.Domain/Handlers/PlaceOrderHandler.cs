@@ -1,10 +1,10 @@
 ﻿using eda_fundamentals.Order.Domain.Commands;
-using eda_fundamentals.Order.Domain.Event;
+using eda_fundamentals.Order.Domain.Events;
 using eda_fundamentals.Order.Domain.Repositories;
 using eda_fundamentals.Shared.Commands.Handlers;
 using eda_fundamentals.Shared.EventServices;
 
-namespace eda_fundamentals.Order.Domain.Handler
+namespace eda_fundamentals.Order.Domain.Handlers
 {
     public class PlaceOrderHandler : ICommandHandler<PlaceOrderCommand>
     {

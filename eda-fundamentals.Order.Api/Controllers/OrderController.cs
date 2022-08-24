@@ -1,5 +1,5 @@
 using eda_fundamentals.Order.Domain.Commands;
-using eda_fundamentals.Order.Domain.Handler;
+using eda_fundamentals.Order.Domain.Handlers;
 using Microsoft.AspNetCore.Mvc;
 
 namespace eda_fundamentals.Order.Api;

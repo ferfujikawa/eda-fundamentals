@@ -1,5 +1,5 @@
 ﻿using eda_fundamentals.Order.Domain.Commands;
-using eda_fundamentals.Order.Domain.Handler;
+using eda_fundamentals.Order.Domain.Handlers;
 using eda_fundamentals.Order.Domain.Repositories;
 using eda_fundamentals.Order.Infra.ExternalServices;
 using eda_fundamentals.Order.Infra.Repositories;
