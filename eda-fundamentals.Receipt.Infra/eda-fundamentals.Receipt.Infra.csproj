@@ -5,6 +5,10 @@
     <ProjectReference Include="..\eda-fundamentals.Receipt.Domain\eda-fundamentals.Receipt.Domain.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Confluent.Kafka" Version="1.9.2" />
+  </ItemGroup>
+
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
     <RootNamespace>eda_fundamentals.Receipt.Infra</RootNamespace>
