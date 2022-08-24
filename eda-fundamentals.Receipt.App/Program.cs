@@ -17,6 +17,7 @@ class Program
         serviceCollection.AddServices();
 
         var serviceProvider = serviceCollection.BuildServiceProvider();
+        serviceProvider.GetService<Service>().RunAsync().Wait();
         Console.WriteLine(configuration.GetValue<string>("mensagem"));
     }
 }
