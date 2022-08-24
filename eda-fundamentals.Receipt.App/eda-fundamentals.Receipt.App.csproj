@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <ItemGroup>
+    <ProjectReference Include="..\eda-fundamentals.Receipt.Infra\eda-fundamentals.Receipt.Infra.csproj" />
+    <ProjectReference Include="..\eda-fundamentals.Receipt.Domain\eda-fundamentals.Receipt.Domain.csproj" />
+    <ProjectReference Include="..\eda-fundamentals.Shared\eda-fundamentals.Shared.csproj" />
+  </ItemGroup>
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net6.0</TargetFramework>
+    <RootNamespace>eda_fundamentals.Receipt.App</RootNamespace>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+</Project>

@@ -17,6 +17,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "eda-fundamentals.Order.Api"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "eda-fundamentals.Receipt.Infra", "eda-fundamentals.Receipt.Infra\eda-fundamentals.Receipt.Infra.csproj", "{628CCEB1-BA15-4C29-B005-420E5FC4B08B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "eda-fundamentals.Receipt.App", "eda-fundamentals.Receipt.App\eda-fundamentals.Receipt.App.csproj", "{9CD589E5-261A-44C7-87F7-86BDF7B3A1E1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +53,10 @@ Global
 		{628CCEB1-BA15-4C29-B005-420E5FC4B08B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{628CCEB1-BA15-4C29-B005-420E5FC4B08B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{628CCEB1-BA15-4C29-B005-420E5FC4B08B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9CD589E5-261A-44C7-87F7-86BDF7B3A1E1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9CD589E5-261A-44C7-87F7-86BDF7B3A1E1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9CD589E5-261A-44C7-87F7-86BDF7B3A1E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9CD589E5-261A-44C7-87F7-86BDF7B3A1E1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
