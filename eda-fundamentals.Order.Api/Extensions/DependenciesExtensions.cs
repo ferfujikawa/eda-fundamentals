@@ -8,7 +8,7 @@ using eda_fundamentals.Order.Infra.Repositories;
 
 namespace eda_fundamentals.Order.Api.Extensions
 {
-    public static class ServiceCollectionExtensions
+    public static class DependenciesExtensions
     {
         public static void AddProducerConfig(this IServiceCollection services, string bootStrapServers)
         {
