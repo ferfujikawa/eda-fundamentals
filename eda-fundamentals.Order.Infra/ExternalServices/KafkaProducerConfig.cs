@@ -1,12 +1,13 @@
 ﻿using Confluent.Kafka;
+using eda_fundamentals.Shared.Configurations;
 
 namespace eda_fundamentals.Order.Infra.ExternalServices
 {
     public class KafkaProducerConfig : ProducerConfig
     {
-        public KafkaProducerConfig(string bootStrapServers)
+        public KafkaProducerConfig(IKafkaConfiguration kafkaConfiguration)
         {
-            BootstrapServers = bootStrapServers;
+            BootstrapServers = kafkaConfiguration.Url;
         }
     }
 }
