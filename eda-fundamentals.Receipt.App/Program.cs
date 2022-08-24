@@ -16,11 +16,10 @@ class Program
 
         var serviceCollection = new ServiceCollection();
         serviceCollection.AddKafkaConsumerConfig(configuration);
+        serviceCollection.AddConsumers();
         serviceCollection.AddServices();
 
         var serviceProvider = serviceCollection.BuildServiceProvider();
-        serviceProvider.GetService<Service>().RunAsync().Wait();
-
-        Console.WriteLine(configuration.GetValue<string>("mensagem"));
+        serviceProvider.GetService<Service>()?.RunAsync().Wait();
     }
 }
