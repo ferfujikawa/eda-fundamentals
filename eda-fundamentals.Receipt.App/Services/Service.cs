@@ -1,4 +1,4 @@
-﻿namespace eda_fundamentals.Receipt.App
+﻿namespace eda_fundamentals.Receipt.App.Services
 {
     public class Service
     {
