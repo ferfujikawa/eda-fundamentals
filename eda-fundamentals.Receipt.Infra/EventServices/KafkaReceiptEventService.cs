@@ -1,8 +1,10 @@
 ﻿using Confluent.Kafka;
+using eda_fundamentals.Receipt.Domain.Events;
 using eda_fundamentals.Receipt.Domain.EventServices;
 using eda_fundamentals.Receipt.Infra.ExternalServices;
+using System.Text.Json;
 
-namespace eda_fundamentals.Order.Infra.EventServices
+namespace eda_fundamentals.Receipt.Infra.EventServices
 {
     public class KafkaReceiptEventService : IKafkaReceiptEventService
     {
@@ -19,7 +21,8 @@ namespace eda_fundamentals.Order.Infra.EventServices
             while (true)
             {
                 var cr = await Task.FromResult(_consumer.Consume());
-                Console.WriteLine($"Consumed record with key {cr.Message.Key} and value {cr.Message.Value}");
+                var data = JsonSerializer.Deserialize<OrderPlacedEvent>(cr.Message.Value);
+                Console.WriteLine($"Consumed record with key {cr.Message.Key} and Order Id {data?.Order.Id.ToString()}");
             }
         }
     }

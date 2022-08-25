@@ -1,5 +1,4 @@
-﻿using eda_fundamentals.Order.Infra.EventServices;
-using eda_fundamentals.Receipt.Domain.EventServices;
+﻿using eda_fundamentals.Receipt.Domain.EventServices;
 
 namespace eda_fundamentals.Receipt.App.Services
 {

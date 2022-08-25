@@ -24,7 +24,7 @@ namespace eda_fundamentals.Order.Infra.Repositories
 
         public async Task<User?> GetByIdAsync(Guid id)
         {
-            var user = new User("Usuário fake");
+            var user = new User("usuario_fake@edafundamentals.com");
             await Task.Run(() => _users.Add(user));
             
             return user;

@@ -3,7 +3,6 @@ using eda_fundamentals.Order.Domain.Events;
 using eda_fundamentals.Order.Domain.EventServices;
 using eda_fundamentals.Order.Infra.ExternalServices;
 using System.Text.Json;
-using static Confluent.Kafka.ConfigPropertyNames;
 
 namespace eda_fundamentals.Order.Infra.EventServices
 {
