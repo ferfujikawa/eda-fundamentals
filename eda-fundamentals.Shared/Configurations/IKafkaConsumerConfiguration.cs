@@ -2,11 +2,12 @@
 {
     public interface IKafkaConsumerConfiguration
     {
-        public string? BootstrapServers { get; set; }
-        public string? GroupId { get; set; }
-        public bool? EnableAutoCommit { get; set; }
-        public int? AutoCommitIntervalMs { get; set; }
-        public int? StatisticsIntervalMs { get; set; }
-        public int? AutoOffsetReset { get; set; }
+        string BootstrapServers { get; set; }
+        string GroupId { get; set; }
+        string Topic { get; set; }
+        bool EnableAutoCommit { get; set; }
+        int AutoCommitIntervalMs { get; set; }
+        int StatisticsIntervalMs { get; set; }
+        int AutoOffsetReset { get; set; }
     }
 }

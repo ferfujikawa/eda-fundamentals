@@ -5,15 +5,18 @@ namespace eda_fundamentals.Receipt.Infra.ExternalServices
 {
     public class KafkaConsumerConfig : ConsumerConfig
     {
-        public KafkaConsumerConfig(IKafkaConsumerConfiguration kafkaConsumerConfiguration)
+        public KafkaConsumerConfig(IKafkaConsumerConfiguration configuration)
         {
-            BootstrapServers = kafkaConsumerConfiguration.BootstrapServers;
-            GroupId = kafkaConsumerConfiguration.GroupId;
-            EnableAutoCommit = kafkaConsumerConfiguration.EnableAutoCommit;
-            AutoCommitIntervalMs = kafkaConsumerConfiguration.AutoCommitIntervalMs;
-            StatisticsIntervalMs = kafkaConsumerConfiguration.StatisticsIntervalMs;
-            //AutoOffsetReset = kafkaConsumerConfiguration.AutoOffsetReset;
+            BootstrapServers = configuration.BootstrapServers;
+            GroupId = configuration.GroupId;
+            EnableAutoCommit = configuration.EnableAutoCommit;
+            AutoCommitIntervalMs = configuration.AutoCommitIntervalMs;
+            StatisticsIntervalMs = configuration.StatisticsIntervalMs;
+            //AutoOffsetReset = configuration.AutoOffsetReset;
             AutoOffsetReset = Confluent.Kafka.AutoOffsetReset.Earliest;
+            Topic = configuration.Topic;
         }
+
+        public string Topic { get; private set; }
     }
 }

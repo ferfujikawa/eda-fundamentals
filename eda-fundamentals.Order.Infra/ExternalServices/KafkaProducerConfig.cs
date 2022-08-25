@@ -5,9 +5,12 @@ namespace eda_fundamentals.Order.Infra.ExternalServices
 {
     public class KafkaProducerConfig : ProducerConfig
     {
-        public KafkaProducerConfig(IKafkaConfiguration kafkaConfiguration)
+        public KafkaProducerConfig(IKafkaProducerConfiguration configuration)
         {
-            BootstrapServers = kafkaConfiguration.Url;
+            BootstrapServers = configuration.BootstrapServers;
+            Topic = configuration.Topic;
         }
+
+        public string Topic { get; private set; }
     }
 }

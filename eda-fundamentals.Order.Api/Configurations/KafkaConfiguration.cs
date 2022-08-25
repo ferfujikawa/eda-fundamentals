@@ -2,8 +2,9 @@
 
 namespace eda_fundamentals.Order.Api.Configurations
 {
-    public class KafkaConfiguration : IKafkaConfiguration
+    public class KafkaConfiguration : IKafkaProducerConfiguration
     {
-        public string? Url { get; set; }
+        public string BootstrapServers { get; set; }
+        public string Topic { get; set; }
     }
 }

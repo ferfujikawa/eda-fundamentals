@@ -9,7 +9,7 @@ using Microsoft.Extensions.DependencyInjection;
 
 namespace eda_fundamentals.Receipt.App.Extensions
 {
-    public static class DependenciesExtension
+    public static class AppExtension
     {
         public static void LoadConfiguration(this ConfigurationBuilder builder)
         {
@@ -24,7 +24,7 @@ namespace eda_fundamentals.Receipt.App.Extensions
             configurationRoot.GetSection("KafkaConsumerSettings").Bind(kafkaConfiguration);
             services.AddSingleton<IKafkaConsumerConfiguration>(x => kafkaConfiguration);
 
-            services.AddTransient<KafkaConsumerConfig>();
+            services.AddSingleton<KafkaConsumerConfig>();
         }
 
         public static void AddServices(this ServiceCollection services)

@@ -11,7 +11,7 @@ namespace eda_fundamentals.Order.Infra.EventServices
         public KafkaReceiptEventService(KafkaConsumerConfig consumerConfig)
         {
             _consumer = new ConsumerBuilder<string, string>(consumerConfig).Build();
-            _consumer.Subscribe("OrderPlacedEvent");
+            _consumer.Subscribe(consumerConfig.Topic);
         }
 
         public async Task DeQueueAsync()

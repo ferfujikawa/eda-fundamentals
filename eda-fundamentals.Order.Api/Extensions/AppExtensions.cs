@@ -6,6 +6,7 @@ using eda_fundamentals.Order.Domain.Repositories;
 using eda_fundamentals.Order.Infra.EventServices;
 using eda_fundamentals.Order.Infra.ExternalServices;
 using eda_fundamentals.Order.Infra.Repositories;
+using eda_fundamentals.Shared.Configurations;
 
 namespace eda_fundamentals.Order.Api.Extensions
 {
@@ -14,9 +15,10 @@ namespace eda_fundamentals.Order.Api.Extensions
         public static void AddKafkaProducerConfig(this WebApplicationBuilder builder)
         {
             var kafkaConfiguration = new KafkaConfiguration();
-            builder.Configuration.GetSection("KafkaServer").Bind(kafkaConfiguration);
+            builder.Configuration.GetSection("KafkaProducerSettings").Bind(kafkaConfiguration);
+            builder.Services.AddSingleton<IKafkaProducerConfiguration>(x => kafkaConfiguration);
             
-            builder.Services.AddTransient(x => new KafkaProducerConfig(kafkaConfiguration));
+            builder.Services.AddSingleton<KafkaProducerConfig>();
         }
 
         public static void AddServices(this IServiceCollection services)
