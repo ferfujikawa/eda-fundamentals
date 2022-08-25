@@ -5,8 +5,6 @@ VisualStudioVersion = 17.3.32819.101
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "eda-fundamentals.Order.Domain", "eda-fundamentals.Order.Domain\eda-fundamentals.Order.Domain.csproj", "{60B0752E-EC22-4DFC-983C-0CFD4685585F}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "eda-fundamentals.Clearance.Domain", "eda-fundamentals.Clearance.Domain\eda-fundamentals.Clearance.Domain.csproj", "{00A325F7-C767-4D17-87DF-659F113A2DB2}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "eda-fundamentals.Shared", "eda-fundamentals.Shared\eda-fundamentals.Shared.csproj", "{5B6FF7FA-DED1-4497-B830-592183513A87}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "eda-fundamentals.Receipt.Domain", "eda-fundamentals.Receipt.Domain\eda-fundamentals.Receipt.Domain.csproj", "{4EBC46C7-BC00-46EB-8F02-0C53E8C3B0F9}"
@@ -17,7 +15,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "eda-fundamentals.Order.Api"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "eda-fundamentals.Receipt.Infra", "eda-fundamentals.Receipt.Infra\eda-fundamentals.Receipt.Infra.csproj", "{628CCEB1-BA15-4C29-B005-420E5FC4B08B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "eda-fundamentals.Receipt.App", "eda-fundamentals.Receipt.App\eda-fundamentals.Receipt.App.csproj", "{9CD589E5-261A-44C7-87F7-86BDF7B3A1E1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "eda-fundamentals.Receipt.App", "eda-fundamentals.Receipt.App\eda-fundamentals.Receipt.App.csproj", "{9CD589E5-261A-44C7-87F7-86BDF7B3A1E1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -29,10 +27,6 @@ Global
 		{60B0752E-EC22-4DFC-983C-0CFD4685585F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{60B0752E-EC22-4DFC-983C-0CFD4685585F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{60B0752E-EC22-4DFC-983C-0CFD4685585F}.Release|Any CPU.Build.0 = Release|Any CPU
-		{00A325F7-C767-4D17-87DF-659F113A2DB2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{00A325F7-C767-4D17-87DF-659F113A2DB2}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{00A325F7-C767-4D17-87DF-659F113A2DB2}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{00A325F7-C767-4D17-87DF-659F113A2DB2}.Release|Any CPU.Build.0 = Release|Any CPU
 		{5B6FF7FA-DED1-4497-B830-592183513A87}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{5B6FF7FA-DED1-4497-B830-592183513A87}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5B6FF7FA-DED1-4497-B830-592183513A87}.Release|Any CPU.ActiveCfg = Release|Any CPU

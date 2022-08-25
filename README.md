@@ -4,33 +4,19 @@
 
 Solução criada para praticar o que foi aprendido no curso *Fundamentos do Event-Driven Architecture* de balta.io, além da aplicação de demais conceitos e práticas vistos em outros cursos e repositórios do Github.
 
-## 2 Arquitetura da solução
+## 2 Contextos
 
-### 2.1 docker
+### 2.1 eda-fundamentals.Order
 
-Diretório com arquivo *docker-compose.yml* para criação de containers de mensageria:
+Contexto composto pelos projetos Domain (classlib), Infra (classlib) e Api (webapi). A API deste contexto possui um endpoint para registro de um *Order* e envio de mensagem ao Kafka contendo dados do *Order* registrado.
 
-- zookeeper
+### 2.2 eda-fundamentals.Receipt
 
-- kafka
+Contexto composto pelos projetos Domain (classlib), Infra (classlib) e App (console). A aplicação console deste contexto cria um *consumer* das mensagens enviadas ao Kafka, e faz a deserialização do *Order* contido na mensagem.
 
-- kafka-ui
-
-### 2.2 eda-fundamentals.Shared
+### 2.3 eda-fundamentals.Shared
 
 Projeto do tipo *classlib* com recursos compartilhados entre os demais projetos da solução, contendo classes abstratas e interfaces.
-
-### 2.3 eda-fundamentals.Order.Domain
-
-### 2.4 eda-fundamentals.Order.Infra
-
-### 2.5 eda-fundamentals.Order.Api
-
-### 2.6 eda-fundamentals.Receipt.Domain
-
-### 2.7 eda-fundamentals.Receipt.Infra
-
-### 2.8 eda-fundamentals.Receipt.Api
 
 ## 3 Configuração
 
@@ -47,5 +33,3 @@ docker-compose up -d
 - [GitHub - ivanpaulovich/event-sourcing-jambo: An Hexagonal Architecture with DDD + Aggregates + Event Sourcing using .NET Core, Kafka e MongoDB (Blog Engine)](https://github.com/ivanpaulovich/event-sourcing-jambo)
 
 - [GitHub - balta-io/2810: Curso 2810 - Fundamentos da Arquitetura Orientada a Eventos (Event-Driven Architecture) com Apache Kafka](https://github.com/balta-io/2810)
-
-
