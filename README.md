@@ -28,6 +28,12 @@ Partindo do princípio que você possui o Docker instalado no seu computador, in
 docker-compose up -d
 ```
 
+Assim, serão iniciados 3 *containers* de mensageria:
+
+- zookeeper
+- kafka
+- kafka-ui
+
 ## 4 Referências
 
 - [GitHub - ivanpaulovich/event-sourcing-jambo: An Hexagonal Architecture with DDD + Aggregates + Event Sourcing using .NET Core, Kafka e MongoDB (Blog Engine)](https://github.com/ivanpaulovich/event-sourcing-jambo)
